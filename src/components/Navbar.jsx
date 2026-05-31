@@ -19,7 +19,7 @@ export default function Navbar(){
   const close=()=>setOpen(false)
   return <header className="navbar">
     <Link to="/" className="brand" onClick={close}>
-      <BrandLogo />
+      <BrandLogo variant="secondary" />
     </Link>
     <nav className="desktop-nav">
       {links.map(([to,label])=><NavLink key={to} to={to} className={({isActive})=>isActive?'active':''}>{label}</NavLink>)}

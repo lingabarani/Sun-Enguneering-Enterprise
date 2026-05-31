@@ -5,14 +5,14 @@ import { company, products, reviews } from '../data/products.js'
 import { siteImages } from '../data/siteImages.js'
 import ProductCard from '../components/ProductCard.jsx'
 import ReviewCard from '../components/ReviewCard.jsx'
-import { AdvantageBand, ContactCta, IconPills, ProductRibbon, QualityBand, StatsStrip, TrustPanel } from '../components/PremiumBlocks.jsx'
+import { AdvantageBand, BrandLogo, ContactCta, IconPills, ProductRibbon, QualityBand, StatsStrip, TrustPanel } from '../components/PremiumBlocks.jsx'
 
 export default function Home() {
   return (
     <>
       <section className="premium-hero home-hero home-hero-compact home-photo-hero section-pad" style={{ '--hero-bg': `url("${siteImages.homeConstruction}")` }}>
         <div className="hero-copy">
-          <span className="tech-chip">{company.brand}</span>
+          <div style={{ marginBottom: '16px' }}><BrandLogo variant="main" /></div>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
             Precision Mechanical <span>Splicing & Rebar Threading Solutions</span>
           </motion.h1>

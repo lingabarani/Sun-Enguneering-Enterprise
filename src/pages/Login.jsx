@@ -13,7 +13,7 @@ export default function Login() {
         <div className="secure-strip"><span><ShieldCheck /> Secure Login</span><span><Users /> Trusted by Engineers</span><span><Mail /> 24/7 Support</span></div>
       </div>
       <form className="login-card card">
-        <BrandLogo compact />
+        <BrandLogo variant="main" />
         <h2>Welcome <span>Back</span></h2>
         <p>Sign in to access your account and manage your projects.</p>
         <label>Email Address<input placeholder="youremail@example.com" type="email" /></label>

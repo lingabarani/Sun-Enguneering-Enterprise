@@ -25,14 +25,14 @@ const quickActions = [
 export default function Chatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Welcome to Sun Engineering. I can help with product selection, quote details, reports or on-site threading support.' },
+    { from: 'bot', text: 'Hi! I’m SunBot. How can I help you today?' },
   ])
   const [text, setText] = useState('')
 
   if (!open) {
     return (
-      <button className="chat-min" onClick={() => setOpen(true)} aria-label="Open Sun Engineering assistant">
-        <Bot />
+      <button className="chat-min badge-icon" onClick={() => setOpen(true)} aria-label="Open SunBot">
+        <img src="/assets/All%20Logos/icon%20only.png" alt="SunBot" />
       </button>
     )
   }
@@ -51,10 +51,10 @@ export default function Chatbot() {
   }
 
   return (
-    <section className="chatbot" aria-label="Sun Engineering assistant">
+    <section className="chatbot" aria-label="SunBot">
       <button className="close" onClick={() => setOpen(false)} aria-label="Close assistant"><X size={16} /></button>
       <div className="bot-head">
-        <Bot />
+        <div className="bot-avatar-badge"><img src="/assets/All%20Logos/icon%20only.png" alt="SunBot" /></div>
         <div>
           <b>SunBot</b>
           <p><CheckCircle2 size={14} /> Online enquiry desk</p>
@@ -89,7 +89,7 @@ export default function Chatbot() {
       <div className="bot-footer">
         <Link to="/request-quote">Quote form</Link>
         <button onClick={() => openWhatsApp('Hello Sun Engineering,\n\nI need expert support from the website assistant.')}>
-          <MessageCircle size={14} /> WhatsApp
+          <MessageCircle size={14} /> Chat Now
         </button>
         <a href="tel:+919360170110"><PhoneCall size={14} /> Call</a>
       </div>

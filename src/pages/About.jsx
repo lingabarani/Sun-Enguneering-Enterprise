@@ -1,7 +1,7 @@
 import { Award, Eye, Goal, Quote, ShieldCheck, Users } from 'lucide-react'
 import { company, advantages, reviews, certifications, clientSegments } from '../data/products.js'
 import ReviewCard from '../components/ReviewCard.jsx'
-import { IconPills, PageHero, ProductRibbon, TrustPanel } from '../components/PremiumBlocks.jsx'
+import { BrandLogo, IconPills, PageHero, ProductRibbon, TrustPanel } from '../components/PremiumBlocks.jsx'
 import { siteImages } from '../data/siteImages.js'
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
       </PageHero>
       <section className="section-pad about-dashboard">
         <div className="card overview-card">
-          <span className="section-kicker">Company Overview</span>
+          <div style={{ marginBottom: '14px' }}><BrandLogo variant="main" /></div>
           <h2>Engineering strength with accountable service.</h2>
           <p>{company.name}, {company.place} is a trusted manufacturer and supplier of Tensile Tek Mechanical Splicing Systems. We manufacture high tensile steel products and deliver precision engineered services across India.</p>
         </div>

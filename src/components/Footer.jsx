@@ -10,8 +10,8 @@ export default function Footer() {
     <footer className="footer section-pad">
       <div className="footer-grid">
         <div>
-          <Link to="/" className="brand footer-brand"><BrandLogo /></Link>
-          <p>Precision manufacturing. Mechanical splicing excellence. Building high tensile strength steel structures with zero steel wastage.</p>
+          <Link to="/" className="brand footer-brand"><BrandLogo variant="monochrome" /></Link>
+          <p>Precision Manufacturing. Mechanical Splicing Excellence. Building high tensile strength steel structures with zero steel wastage.</p>
           <div className="socials"><span>f</span><span>ig</span><span>in</span><span>yt</span></div>
         </div>
         <div>

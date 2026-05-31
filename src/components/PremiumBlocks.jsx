@@ -20,17 +20,16 @@ import {
 import { advantages, company, heroImages, products, reviews } from '../data/products.js'
 import { siteImages } from '../data/siteImages.js'
 
-export function BrandLogo({ compact = false }) {
+export function BrandLogo({ variant = 'secondary' }) {
+  const srcMap = {
+    main: '/assets/All%20Logos/main%20logo.png',
+    secondary: '/assets/All%20Logos/secondary%20logo.png',
+    monochrome: '/assets/All%20Logos/monocrop%20variations.png',
+    icon: '/assets/All%20Logos/icon%20only.png'
+  }
   return (
-    <span className={`se-logo ${compact ? 'compact' : ''}`}>
-      {compact ? (
-        <img src="/assets/All%20Logos/icon%20only.png" alt="SE" className="se-logo-img compact" />
-      ) : (
-        <>
-          <img src="/assets/All%20Logos/main%20logo.png" alt="Sun Engineering" className="se-logo-img main dark-only" />
-          <img src="/assets/All%20Logos/secondary%20logo.png" alt="Sun Engineering" className="se-logo-img main light-only" />
-        </>
-      )}
+    <span className={`se-logo variant-${variant}`}>
+      <img src={srcMap[variant]} alt="Sun Engineering" className={`logo-img ${variant}`} />
     </span>
   )
 }

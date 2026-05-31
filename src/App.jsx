@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Chatbot from './components/Chatbot.jsx'
 import StickyCta from './components/StickyCta.jsx'
+import LoadingScreen from './components/LoadingScreen.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Products from './pages/Products.jsx'
@@ -18,6 +19,7 @@ import Order from './pages/Order.jsx'
 export default function App() {
   return (
     <div className="app-shell">
+      <LoadingScreen />
       <Navbar />
       <main>
         <Routes>
