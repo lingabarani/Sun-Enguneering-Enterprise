@@ -56,7 +56,7 @@ export default function Chatbot() {
       <div className="bot-head">
         <Bot />
         <div>
-          <b>Sun Engineering Assistant</b>
+          <b>SunBot</b>
           <p><CheckCircle2 size={14} /> Online enquiry desk</p>
         </div>
       </div>

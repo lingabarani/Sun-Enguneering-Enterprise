@@ -16,9 +16,9 @@ export const company = {
 
 const A='/assets/products/'
 export const heroImages = {
-  machine: A+'rebar-thread-rolling-machine-250x250.jpeg',
-  coupler: A+'25mm-taper-threaded-coupler-250x250.jpeg',
-  rods: A+'taper-threading-250x250.jpeg',
+  machine: siteImages.rollingMachine,
+  coupler: siteImages.metalCouplers,
+  rods: siteImages.threadedRods,
 }
 
 export const products = [

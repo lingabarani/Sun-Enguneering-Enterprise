@@ -73,8 +73,8 @@ export default function Home() {
         <div className="product-grid">{products.slice(0, 9).map((p) => <ProductCard key={p.id} product={p} />)}</div>
       </section>
 
-      <section className="section-pad">
-        <div className="section-title"><div><span>Trusted by engineers</span><h2>Ratings & Reviews</h2></div></div>
+      <section className="section-pad review-backdrop" style={{ '--feature-bg': `url("${siteImages.bridgeProject}")` }}>
+        <div className="section-title"><div><span>Trusted by engineers</span><h2 style={{ color: '#fff' }}>Ratings & Reviews</h2></div></div>
         <div className="review-grid">{reviews.map((r) => <ReviewCard key={r.name} review={r} />)}</div>
       </section>
 

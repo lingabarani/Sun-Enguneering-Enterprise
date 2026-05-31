@@ -12,7 +12,14 @@ export default function ProductDetail() {
   const specs = product.specs || {}
   const msg = `Hello Sun Engineering,\n\nI am interested in ${product.name}.\nPrice: ${product.price}\nSize: ${product.size}\nPlease share best price and availability.`
   const related = products.filter((p) => p.id !== product.id).slice(0, 4)
-  const detailHeroImage = product.category === 'Couplers & Components' ? siteImages.metalCouplers : product.image
+  const categoryImageMap = {
+    'Couplers & Components': siteImages.metalCouplers,
+    'Steel Threaded Rod': siteImages.threadedRods,
+    'Accessories': siteImages.foundationBolts,
+    'Machines': siteImages.rollingMachine,
+    'Threading Services': siteImages.onsiteThreading,
+  }
+  const detailHeroImage = categoryImageMap[product.category] || siteImages.metalCouplers
 
   return (
     <>

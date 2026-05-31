@@ -23,11 +23,14 @@ import { siteImages } from '../data/siteImages.js'
 export function BrandLogo({ compact = false }) {
   return (
     <span className={`se-logo ${compact ? 'compact' : ''}`}>
-      <span className="se-mark">SE</span>
-      <span className="se-name">
-        <b>SUN ENGINEERING</b>
-        <small>COIMBATORE</small>
-      </span>
+      {compact ? (
+        <img src="/assets/All%20Logos/icon%20only.png" alt="SE" className="se-logo-img compact" />
+      ) : (
+        <>
+          <img src="/assets/All%20Logos/main%20logo.png" alt="Sun Engineering" className="se-logo-img main dark-only" />
+          <img src="/assets/All%20Logos/secondary%20logo.png" alt="Sun Engineering" className="se-logo-img main light-only" />
+        </>
+      )}
     </span>
   )
 }
