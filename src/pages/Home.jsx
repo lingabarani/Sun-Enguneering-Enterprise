@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       <section className="section-pad trust-marquee" aria-label="Trust signals">
-        <span>ISO 9001:2015</span>
+        <span>Premium Splicing</span>
         <span>Tensile Test Reports</span>
         <span>Spectro Reports</span>
         <span>Pan India Service</span>

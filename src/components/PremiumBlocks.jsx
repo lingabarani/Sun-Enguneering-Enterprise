@@ -189,7 +189,7 @@ export function ProductRibbon() {
 
 export function QualityBand() {
   const items = [
-    { icon: Award, title: 'ISO 9001:2015', text: 'Certified company' },
+    { icon: Award, title: 'Industry Leaders', text: 'Trusted expertise' },
     { icon: Zap, title: 'High Tensile', text: 'Strength assured' },
     { icon: Leaf, title: 'Zero Wastage', text: 'Smarter splicing' },
     { icon: Wrench, title: 'On-Site Experts', text: 'Threading support' },

@@ -1,8 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-import Chatbot from './components/Chatbot.jsx'
-import StickyCta from './components/StickyCta.jsx'
+import WhatsAppButton from './components/WhatsAppButton.jsx'
 import LoadingScreen from './components/LoadingScreen.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -37,8 +36,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <StickyCta />
-      <Chatbot />
+      <WhatsAppButton />
     </div>
   )
 }

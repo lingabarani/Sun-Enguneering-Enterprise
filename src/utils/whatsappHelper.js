@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = '919360170110'
+export const WHATSAPP_NUMBER = '919080274486'
 export const PHONE_PRIMARY = '+919360170110'
 export const PHONE_SECONDARY = '+919092048069'
 
@@ -16,5 +16,5 @@ export function buildQuoteMessage(form) {
 }
 
 export function generalMessage() {
-  return `Hello Sun Engineering,\n\nI am interested in your products and services.\nPlease share details about pricing, availability, and delivery.\n\nThank you.`
+  return `Hello Sun Engineering, I’d like to know more about your products.`
 }

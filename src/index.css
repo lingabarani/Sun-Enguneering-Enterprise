@@ -156,7 +156,7 @@ button { cursor: pointer; }
   background: var(--panel2);
   border-bottom: 1px solid var(--line);
 }
-.mobile-menu a { padding: 14px; border: 1px solid var(--line-soft); background: rgba(255,255,255,.03); }
+.mobile-menu a { padding: 14px; border: 1px solid var(--line-soft); background: rgba(255,255,255,.03); text-align: right; }
 
 .premium-hero, .detail-hero {
   position: relative;
@@ -889,8 +889,8 @@ h3 { margin: 6px 0 8px; }
 .footer-grid, .footer-bottom { width: min(100%, 1320px); margin-inline: auto; }
 .footer h4 { color: var(--gold2); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 12px; }
 .footer p, .footer a { color: var(--muted); line-height: 1.65; }
-.footer a { display: flex; gap: 8px; }
-.footer svg { flex: 0 0 auto; width: 18px; color: var(--gold2); }
+.footer p, .footer a { display: flex; gap: 8px; align-items: flex-start; }
+.footer svg { flex: 0 0 auto; width: 18px; color: var(--gold2); margin-top: 4px; }
 .socials { display: flex; gap: 10px; margin-top: 14px; }
 .socials span, .cert-badges span { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: #13202b; color: var(--gold2); font-weight: 900; }
 .cert-badges { display: flex; gap: 8px; margin-top: 12px; }
