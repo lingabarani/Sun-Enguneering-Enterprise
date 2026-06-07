@@ -38,22 +38,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad trust-marquee" aria-label="Trust signals">
+      <motion.section 
+        className="section-pad trust-marquee" 
+        aria-label="Trust signals"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <span>Premium Splicing</span>
         <span>Tensile Test Reports</span>
         <span>Spectro Reports</span>
         <span>Pan India Service</span>
         <span>Up to 40mm Bar Size</span>
-      </section>
+      </motion.section>
 
-      <section className="section-pad ribbon-section">
+      <motion.section 
+        className="section-pad ribbon-section"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
         <ProductRibbon />
-      </section>
+      </motion.section>
 
-      <AdvantageBand />
-      <QualityBand />
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <AdvantageBand />
+      </motion.section>
+      
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <QualityBand />
+      </motion.section>
 
-      <section className="split section-pad about-strip">
+      <motion.section 
+        className="split section-pad about-strip"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
         <div>
           <span className="section-kicker">Heritage & Leadership</span>
           <h2>Engineers in strength. Partners in project certainty.</h2>
@@ -61,22 +95,43 @@ export default function Home() {
           <Link className="primary-btn" to="/about">Know More <ArrowRight size={18} /></Link>
         </div>
         <TrustPanel withQuote />
-      </section>
+      </motion.section>
 
-      <section className="section-pad"><StatsStrip /></section>
+      <motion.section 
+        className="section-pad"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <StatsStrip />
+      </motion.section>
 
-      <section className="section-pad">
+      <motion.section 
+        className="section-pad"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
         <div className="section-title">
           <div><span>Products & Services</span><h2>Mechanical splicing systems built to perform</h2></div>
           <Link to="/products" className="outline-btn">View All <ArrowRight size={18} /></Link>
         </div>
         <div className="product-grid">{products.slice(0, 9).map((p) => <ProductCard key={p.id} product={p} />)}</div>
-      </section>
+      </motion.section>
 
-      <section className="section-pad review-backdrop" style={{ '--feature-bg': `url("${siteImages.bridgeProject}")` }}>
+      <motion.section 
+        className="section-pad review-backdrop" 
+        style={{ '--feature-bg': `url("${siteImages.bridgeProject}")` }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="section-title"><div><span>Trusted by engineers</span><h2 style={{ color: '#fff' }}>Ratings & Reviews</h2></div></div>
         <div className="review-grid">{reviews.map((r) => <ReviewCard key={r.name} review={r} />)}</div>
-      </section>
+      </motion.section>
 
       <ContactCta />
     </>
