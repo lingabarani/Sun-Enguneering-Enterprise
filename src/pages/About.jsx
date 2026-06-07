@@ -58,6 +58,44 @@ export default function About() {
           {clientSegments.map((item) => <span key={item}><Users /> {item}</span>)}
         </div>
       </section>
+
+      <section className="section-pad">
+        <div className="section-title">
+          <div><span>Corporate Overview</span><h2>Company Factsheet</h2></div>
+        </div>
+        <div className="factsheet-grid">
+          <div className="card card-lift factsheet-card">
+            <h3><Award /> Basic Information</h3>
+            <ul>
+              <li><span>Nature of Business</span><b>Manufacturer</b></li>
+              <li><span>Additional Business</span><b>Factory / Manufacturing</b></li>
+              <li><span>Company CEO</span><b>V Ravichandran</b></li>
+              <li><span>Total Employees</span><b>11 to 25 People</b></li>
+              <li><span>GST Registration</span><b>Jul'17</b></li>
+              <li><span>Legal Status</span><b>Proprietorship</b></li>
+              <li><span>Annual Turnover</span><b>0 - 40 L</b></li>
+            </ul>
+          </div>
+          
+          <div className="factsheet-column">
+            <div className="card card-lift factsheet-card">
+              <h3><ShieldCheck /> Statutory Profile</h3>
+              <ul>
+                <li><span>Banker</span><b>CORPORATION BANK</b></li>
+                <li><span>GST No.</span><b>33**********1ZP</b></li>
+              </ul>
+            </div>
+            
+            <div className="card card-lift factsheet-card">
+              <h3><Goal /> Packaging, Payment & Shipment</h3>
+              <ul>
+                <li><span>Payment Mode</span><b>Cash, Cheque, Online</b></li>
+                <li><span>Shipment Mode</span><b>By Road</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="section-pad split">
         <div className="card">
           <h2>Why partner with Sun Engineering?</h2>
