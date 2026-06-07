@@ -281,14 +281,12 @@ button { cursor: pointer; }
   align-content: center;
   gap: 14px;
   padding: clamp(22px, 3vw, 34px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(217,155,33,.14), rgba(12,18,22,.6)),
-    linear-gradient(180deg, rgba(255,255,255,.08), transparent);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(217, 155, 33, 0.25);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(12, 18, 22, 0.35), rgba(12, 18, 22, 0.05));
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 .hero-proof-panel h2 { margin: 0; font-size: clamp(1.45rem, 2.3vw, 2.35rem); }
 .hero-proof-panel p {
