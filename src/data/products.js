@@ -16,9 +16,9 @@ export const company = {
 
 const A='/assets/products/'
 export const heroImages = {
-  machine: siteImages.rollingMachine,
-  coupler: siteImages.metalCouplers,
-  rods: siteImages.threadedRods,
+  machine: '/assets/New%20Assets/Screw-Making-Metal-Drawing-Steel-Bar-Pipe-Threading-Machine-Steel-Rod-Roll-Forming-Machine-Thread-Rolling-Machine.webp',
+  coupler: '/assets/New%20Assets/25mm%20Taper%20Threaded%20Coupler.png',
+  rods: '/assets/New%20Assets/Threaded%20Tie%20Rods.png',
 }
 
 const NA = '/assets/New%20Assets/'
