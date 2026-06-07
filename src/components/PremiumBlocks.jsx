@@ -22,10 +22,10 @@ import { siteImages } from '../data/siteImages.js'
 
 export function BrandLogo({ variant = 'secondary' }) {
   const srcMap = {
-    main: '/assets/All%20Logos/Main%20Logo%20Png%20Format.png',
+    main: '/assets/All%20Logos/main%20logo.png',
     secondary: '/assets/All%20Logos/secondary%20logo.png',
     monochrome: '/assets/All%20Logos/monocrop%20variations.png',
-    icon: '/assets/All%20Logos/Icon%20Png%20Format.png'
+    icon: '/assets/All%20Logos/icon%20only.png'
   }
   return (
     <span className={`se-logo variant-${variant}`}>
