@@ -38,12 +38,10 @@ function MobileProductsDropdown({ close }) {
       
       {expanded && (
         <div 
-          className="mobile-dropdown-content" 
+          className="mobile-dropdown-content open" 
           style={{ 
             display: 'flex', 
             flexDirection: 'column', 
-            maxHeight: '45vh', 
-            overflowY: 'auto', 
             background: 'rgba(0,0,0,0.4)', 
             borderLeft: '2px solid var(--gold)' 
           }}
