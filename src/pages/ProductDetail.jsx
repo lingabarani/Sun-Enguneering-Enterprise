@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
-import { ArrowRight, Download, Image, MessageCircle, PhoneCall, ShoppingBag } from 'lucide-react'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { ArrowLeft, ArrowRight, Download, Image, MessageCircle, PhoneCall, ShoppingBag } from 'lucide-react'
 import { products, advantages } from '../data/products.js'
 import { openWhatsApp } from '../utils/whatsappHelper.js'
 import { AdvantageBand } from '../components/PremiumBlocks.jsx'
@@ -7,6 +7,7 @@ import { siteImages } from '../data/siteImages.js'
 
 export default function ProductDetail() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const product = products.find((p) => p.id === id) || products[0]
   const specs = product.specs || {}
   const msg = `Hello Sun Engineering,\n\nI am interested in ${product.name}.\nPrice: ${product.price}\nSize: ${product.size}\nPlease share best price and availability.`
@@ -24,7 +25,17 @@ export default function ProductDetail() {
     <>
       <section className="detail-hero section-pad">
         <div>
-          <span className="breadcrumb">Home &gt; Products &gt; {product.name}</span>
+          <button 
+            onClick={() => navigate(-1)} 
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--gold)', background: 'none', border: 'none', padding: 0, cursor: 'pointer', marginBottom: '16px', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            <ArrowLeft size={16} /> Back
+          </button>
+          <div className="breadcrumb" style={{ marginBottom: '12px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <Link to="/" style={{ color: 'var(--text)', textDecoration: 'none' }}>Home</Link> &gt;{' '}
+            <Link to="/products" style={{ color: 'var(--text)', textDecoration: 'none' }}>Products & Services</Link> &gt;{' '}
+            <span style={{ color: 'var(--gold)' }}>{product.name}</span>
+          </div>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
         </div>

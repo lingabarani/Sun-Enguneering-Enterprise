@@ -28,8 +28,8 @@ function HeroGraphic({ type = 'content' }) {
 
 export default function Home() {
   return (
-    <>
-      <section className="premium-hero home-hero home-hero-compact home-photo-hero section-pad" style={{ '--hero-bg': `url("${siteImages.homeConstruction}")` }}>
+    <div className="home-layout-container">
+      <section className="premium-hero home-hero home-hero-section home-hero-compact home-photo-hero section-pad" style={{ '--hero-bg': `url("${siteImages.homeConstruction}")` }}>
         <div className="hero-copy">
           <div style={{ marginBottom: '16px' }}><BrandLogo variant="main" /></div>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       <motion.section 
-        className="section-pad trust-marquee" 
+        className="section-pad trust-marquee home-trust-section" 
         aria-label="Trust signals"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -65,7 +65,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section 
-        className="section-pad ribbon-section"
+        className="section-pad ribbon-section home-ribbon-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -75,6 +75,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section
+        className="home-advantage-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -84,6 +85,7 @@ export default function Home() {
       </motion.section>
       
       <motion.section
+        className="home-quality-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -93,7 +95,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section 
-        className="split section-pad about-strip"
+        className="split section-pad about-strip home-about-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -109,7 +111,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section 
-        className="section-pad"
+        className="section-pad home-stats-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -119,7 +121,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section 
-        className="section-pad"
+        className="section-pad home-products-section"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -133,7 +135,7 @@ export default function Home() {
       </motion.section>
 
       <motion.section 
-        className="section-pad review-backdrop" 
+        className="section-pad review-backdrop home-review-section" 
         style={{ '--feature-bg': `url("${siteImages.bridgeProject}")` }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -144,7 +146,7 @@ export default function Home() {
         <div className="review-grid">{reviews.map((r) => <ReviewCard key={r.name} review={r} />)}</div>
       </motion.section>
 
-      <ContactCta />
-    </>
+      <div className="home-contact-section"><ContactCta /></div>
+    </div>
   )
 }

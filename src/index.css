@@ -1064,6 +1064,27 @@ h3 { margin: 6px 0 8px; }
 
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 
+/* --- Homepage Layout Ordering --- */
+.home-layout-container { display: flex; flex-direction: column; }
+.home-hero-section { order: 1; }
+.home-trust-section { order: 2; }
+.home-ribbon-section { order: 3; }
+.home-advantage-section { order: 4; }
+.home-quality-section { order: 5; }
+.home-about-section { order: 6; }
+.home-stats-section { order: 7; }
+.home-products-section { order: 8; }
+.home-review-section { order: 9; }
+.home-contact-section { order: 10; }
+
+@media (max-width: 768px) {
+  .home-products-section { order: 4; }
+  .home-advantage-section { order: 5; }
+  .home-quality-section { order: 6; }
+  .home-about-section { order: 7; }
+  .home-stats-section { order: 8; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
