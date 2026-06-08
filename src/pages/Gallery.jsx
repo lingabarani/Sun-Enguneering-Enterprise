@@ -14,7 +14,7 @@ export default function Gallery() {
     <>
       <PageHero eyebrow="Home > Gallery" title="Product & Machinery" accent="Gallery" text="Engineering precision. Delivering strength. Built to perform." variant="gallery" imageSrc={siteImages.threadedRods} />
       <section className="section-pad gallery-page">
-        <article className="gallery-feature" style={{ '--feature-bg': `url("${siteImages.threadedRods}")` }}>
+        <article className="gallery-feature" style={{ '--feature-bg': `url("${siteImages.metalCouplers}")` }}>
           <span className="section-kicker">Main Gallery</span>
           <h2>Stack of threaded steel rods ready for structural work.</h2>
         </article>

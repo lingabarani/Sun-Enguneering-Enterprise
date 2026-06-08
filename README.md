@@ -15,11 +15,30 @@ npm run build
 npm run preview
 ```
 
-## Important files
-- `src/data/products.js` — product database, company details, FAQs and reviews
-- `src/utils/whatsappHelper.js` — WhatsApp message builder and redirect helpers
-- `src/context/ThemeContext.jsx` — dark/light theme with localStorage
-- `src/components/OrderFlow.jsx` — IndiaMART-style 5-step order enquiry flow
+## Project Structure
+```text
+sun-engineering/
++-- public/              Static assets, brochures, product images, logos
++-- src/                 React source code
+|   +-- components/      Reusable UI components
+|   +-- context/         App-level React context
+|   +-- data/            Product, image, company and content data
+|   +-- pages/           Route-level page components
+|   +-- utils/           Shared helpers
++-- docs/                Project notes and setup documentation
+|   +-- screenshots/     UI reference screenshots
++-- logs/                Local development logs
++-- index.html           Vite HTML entry
++-- package.json         Scripts and dependencies
++-- vite.config.js       Vite configuration
+```
+
+## Important Files
+- `src/data/products.js` - product database, company details, FAQs and reviews
+- `src/data/siteImages.js` - page image mapping from `public/assets/New Assets`
+- `src/utils/whatsappHelper.js` - WhatsApp message builder and redirect helpers
+- `src/context/ThemeContext.jsx` - dark/light theme with localStorage
+- `src/components/OrderFlow.jsx` - 5-step order enquiry flow
 
 ## Pages
 Home, About Us, Products & Services, Product Detail, Services, Gallery, Connect With Us, Login, Request Quote, FAQs/Ratings & Reviews, Order/Enquiry.

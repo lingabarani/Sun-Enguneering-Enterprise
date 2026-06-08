@@ -1,5 +1,5 @@
 const NA = '/assets/New%20Assets/'
-const img = (name) => `${NA}${encodeURIComponent(name)}`
+const img = (name) => `${NA}${name.replaceAll(' ', '%20')}`
 
 export const siteImages = {
   homeConstruction: img('ChatGPT Image Jun 8, 2026, 02_56_13 AM (1).png'),

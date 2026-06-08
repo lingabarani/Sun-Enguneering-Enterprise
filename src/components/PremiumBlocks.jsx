@@ -25,7 +25,7 @@ export function BrandLogo({ variant = 'secondary' }) {
     main: '/assets/All%20Logos/main%20logo.png',
     secondary: '/assets/All%20Logos/secondary%20logo.png',
     monochrome: '/assets/All%20Logos/monocrop%20variations.png',
-    icon: '/assets/All%20Logos/icon%20only.png'
+    icon: '/assets/All%20Logos/icon%20only2.png'
   }
   return (
     <span className={`se-logo variant-${variant}`}>

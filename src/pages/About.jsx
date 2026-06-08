@@ -1,7 +1,7 @@
 import { Award, Eye, Goal, Quote, ShieldCheck, Users } from 'lucide-react'
 import { company, advantages, reviews, certifications, clientSegments } from '../data/products.js'
 import ReviewCard from '../components/ReviewCard.jsx'
-import { BrandLogo, IconPills, PageHero, ProductRibbon, TrustPanel } from '../components/PremiumBlocks.jsx'
+import { IconPills, PageHero, ProductRibbon, TrustPanel } from '../components/PremiumBlocks.jsx'
 import { siteImages } from '../data/siteImages.js'
 
 export default function About() {
@@ -12,33 +12,6 @@ export default function About() {
       <PageHero eyebrow="Heritage" title="Built in Coimbatore." accent="Trusted across India." text="Precision manufacturing, documented quality and practical field support for high-strength rebar connections." imageSrc={siteImages.bridgeProject}>
         <IconPills />
       </PageHero>
-      <section className="section-pad about-dashboard">
-        <div className="card overview-card">
-          <div style={{ marginBottom: '14px' }}><BrandLogo variant="main" /></div>
-          <h2>Engineering strength with accountable service.</h2>
-          <p>{company.name}, {company.place} is a trusted manufacturer and supplier of Tensile Tek Mechanical Splicing Systems. We manufacture high tensile steel products and deliver precision engineered services across India.</p>
-        </div>
-        <div className="card factsheet-card" style={{ gridColumn: 'span 3', padding: '32px' }}>
-          <h3 style={{ marginBottom: '24px', color: 'var(--gold)' }}>Basic Information</h3>
-          <div className="factsheet-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-            <div><span className="tech-label">Nature of Business</span><p>Manufacturer</p></div>
-            <div><span className="tech-label">Additional Business</span><p>Factory / Manufacturing</p></div>
-            <div><span className="tech-label">Company CEO</span><p>V Ravichandran</p></div>
-            <div><span className="tech-label">Total Employees</span><p>11 to 25 People</p></div>
-            <div><span className="tech-label">GST Registration Date</span><p>Jul'17</p></div>
-            <div><span className="tech-label">Legal Status</span><p>Proprietorship</p></div>
-            <div><span className="tech-label">Annual Turnover</span><p>0 - 40 L</p></div>
-          </div>
-          <hr style={{ margin: '24px 0', borderColor: 'var(--line)' }} />
-          <h3 style={{ marginBottom: '24px', color: 'var(--gold)' }}>Statutory Profile & Operations</h3>
-          <div className="factsheet-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-            <div><span className="tech-label">Banker</span><p>CORPORATION BANK</p></div>
-            <div><span className="tech-label">GST No.</span><p>33**********1ZP</p></div>
-            <div><span className="tech-label">Payment Mode</span><p>Cash, Cheque, Online</p></div>
-            <div><span className="tech-label">Shipment Mode</span><p>By Road</p></div>
-          </div>
-        </div>
-      </section>
       <section className="section-pad leadership-band">
         <div>
           <span className="section-kicker">Leadership Note</span>

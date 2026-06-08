@@ -33,7 +33,7 @@ export default function LoadingScreen() {
   return (
     <div className={`loading-screen ${fading ? 'fade-out' : ''}`}>
       <div className="loading-wrapper">
-        <img src="/assets/All%20Logos/icon%20only.png" alt="Sun Engineering Loading" className="loading-logo" />
+        <img src="/assets/All%20Logos/icon%20only2.png" alt="Sun Engineering Loading" className="loading-logo" />
       </div>
     </div>
   )

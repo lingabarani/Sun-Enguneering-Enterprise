@@ -27,7 +27,7 @@ export default function Connect() {
 
   return (
     <>
-      <PageHero eyebrow={company.brand} title="Connect With" accent="Sun Engineering" text="Reach out to our team for product enquiries, service support, partnerships or technical assistance." variant="connect" imageSrc={siteImages.engineersConsulting}>
+      <PageHero eyebrow={company.brand} title="Connect With" accent="Sun Engineering" text="Reach out to our team for product enquiries, service support, partnerships or technical assistance." variant="connect" imageSrc={siteImages.onsiteThreading}>
         <TrustPanel />
       </PageHero>
       <section className="section-pad connect-grid">
