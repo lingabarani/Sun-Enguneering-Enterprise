@@ -27,15 +27,7 @@ export default function Home() {
             <Link className="outline-btn" to="/products">Explore Product Studio <ArrowRight size={18} /></Link>
           </div>
         </div>
-        <div className="hero-proof-panel">
-          <span className="section-kicker">Project Ready Support</span>
-          <h2>From coupler selection to site execution.</h2>
-          <div>
-            <p><Gauge /> Size guidance up to 40mm bar diameter</p>
-            <p><ShieldCheck /> Tensile and spectro report support</p>
-            <p><Wrench /> On-site threading and service coordination</p>
-          </div>
-        </div>
+        <img className="hero-art float-3d parallax-slow" src={siteImages.homeConstruction} alt="Sun Engineering site execution" style={{ borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', width: '100%', objectFit: 'cover', minHeight: '360px' }} />
       </section>
 
       <motion.section 

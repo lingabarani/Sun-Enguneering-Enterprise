@@ -9,7 +9,6 @@ const links = [
   ['/products', 'Products & Services'],
   ['/gallery', 'Gallery'],
   ['/connect', 'Connect With Us'],
-  ['/login', 'Login'],
 ]
 
 export default function Navbar(){

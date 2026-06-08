@@ -18,11 +18,25 @@ export default function About() {
           <h2>Engineering strength with accountable service.</h2>
           <p>{company.name}, {company.place} is a trusted manufacturer and supplier of Tensile Tek Mechanical Splicing Systems. We manufacture high tensile steel products and deliver precision engineered services across India.</p>
         </div>
-        <div className="card mission-card"><Goal /><h3>Mission</h3><p>To deliver precision engineered mechanical splicing solutions that ensure strength, quality and customer satisfaction.</p></div>
-        <div className="card mission-card"><Eye /><h3>Vision</h3><p>To be India's most trusted brand in mechanical splicing systems through innovation, reliability and service.</p></div>
-        <div className="card journey-card">
-          <h3>Our Journey</h3>
-          <div className="timeline">{timeline.map(([y, t]) => <div key={y}><b>{y}</b><span>{t}</span></div>)}</div>
+        <div className="card factsheet-card" style={{ gridColumn: 'span 3', padding: '32px' }}>
+          <h3 style={{ marginBottom: '24px', color: 'var(--gold)' }}>Basic Information</h3>
+          <div className="factsheet-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+            <div><span className="tech-label">Nature of Business</span><p>Manufacturer</p></div>
+            <div><span className="tech-label">Additional Business</span><p>Factory / Manufacturing</p></div>
+            <div><span className="tech-label">Company CEO</span><p>V Ravichandran</p></div>
+            <div><span className="tech-label">Total Employees</span><p>11 to 25 People</p></div>
+            <div><span className="tech-label">GST Registration Date</span><p>Jul'17</p></div>
+            <div><span className="tech-label">Legal Status</span><p>Proprietorship</p></div>
+            <div><span className="tech-label">Annual Turnover</span><p>0 - 40 L</p></div>
+          </div>
+          <hr style={{ margin: '24px 0', borderColor: 'var(--line)' }} />
+          <h3 style={{ marginBottom: '24px', color: 'var(--gold)' }}>Statutory Profile & Operations</h3>
+          <div className="factsheet-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+            <div><span className="tech-label">Banker</span><p>CORPORATION BANK</p></div>
+            <div><span className="tech-label">GST No.</span><p>33**********1ZP</p></div>
+            <div><span className="tech-label">Payment Mode</span><p>Cash, Cheque, Online</p></div>
+            <div><span className="tech-label">Shipment Mode</span><p>By Road</p></div>
+          </div>
         </div>
       </section>
       <section className="section-pad leadership-band">

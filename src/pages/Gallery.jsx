@@ -18,14 +18,24 @@ export default function Gallery() {
           <span className="section-kicker">Main Gallery</span>
           <h2>Stack of threaded steel rods ready for structural work.</h2>
         </article>
-        <div className="filter-row">{cats.map((c) => <button key={c} className={cat === c ? 'active' : ''} onClick={() => setCat(c)}>{c}</button>)}</div>
-        <div className="gallery-grid mosaic">
-          {items.map((p, i) => (
-            <button className={`gallery-item item-${i % 5}`} key={p.id} onClick={() => setActive(p)}>
-              <img src={p.image} alt={p.name} />
-              <b>{p.name}</b>
-            </button>
-          ))}
+        <div className="gallery-structured-layout">
+          {cats.filter(c => c !== 'All Gallery').map(category => {
+            const categoryItems = products.filter(p => p.category === category);
+            if (categoryItems.length === 0) return null;
+            return (
+              <div key={category} className="gallery-category-section" style={{ marginBottom: '48px' }}>
+                <h3 className="section-kicker" style={{ marginBottom: '20px', display: 'inline-block', borderBottom: '2px solid var(--gold)' }}>{category}</h3>
+                <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '20px' }}>
+                  {categoryItems.map((p) => (
+                    <button className="gallery-item" key={p.id} onClick={() => setActive(p)} style={{ textAlign: 'left', padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line)' }}>
+                      <img src={p.image} alt={p.name} style={{ borderRadius: '8px', objectFit: 'cover', height: '180px', width: '100%', marginBottom: '12px' }} />
+                      <b style={{ color: 'var(--text)', fontSize: '1rem' }}>{p.name}</b>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="video-grid">
           <VideoCard src="/assets/A_cinematic_D_reveal_of_the_S.mp4" title="Cinematic Brand Reveal" text="Premium Sun Engineering industrial showcase." />
