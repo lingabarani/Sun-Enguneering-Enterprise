@@ -8,7 +8,7 @@ export default function ProductCard({ product, compact = false }) {
   return (
     <article className={`product-card card-lift ${compact ? 'compact' : ''}`}>
       <div className="product-media">
-        <img src={product.image} alt={product.name} />
+        <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
         <span>{product.type}</span>
       </div>
       <div className="product-body">

@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight, Download, Image, MessageCircle, PhoneCall, Shopp
 import { products, advantages } from '../data/products.js'
 import { openWhatsApp } from '../utils/whatsappHelper.js'
 import { AdvantageBand } from '../components/PremiumBlocks.jsx'
-import { siteImages } from '../data/siteImages.js'
 
 export default function ProductDetail() {
   const { id } = useParams()
@@ -11,16 +10,6 @@ export default function ProductDetail() {
   const product = products.find((p) => p.id === id) || products[0]
   const specs = product.specs || {}
   const msg = `Hello Sun Engineering,\n\nI am interested in ${product.name}.\nPrice: ${product.price}\nSize: ${product.size}\nPlease share best price and availability.`
-  
-  const categoryImageMap = {
-    'Couplers & Components': siteImages.metalCouplers,
-    'Steel Threaded Rod': siteImages.threadedRods,
-    'Accessories': siteImages.foundationBolts,
-    'Machines': siteImages.rollingMachine,
-    'Threading Services': siteImages.onsiteThreading,
-  }
-  const detailHeroImage = categoryImageMap[product.category] || siteImages.metalCouplers
-
   return (
     <>
       <section className="detail-hero section-pad">
@@ -39,13 +28,22 @@ export default function ProductDetail() {
           <h1>{product.name}</h1>
           <p>{product.description}</p>
         </div>
-        <img className="detail-hero-img float-3d" src={detailHeroImage} alt={product.name} />
+        <figure className="detail-product-media float-3d">
+          <img className="detail-hero-img" src={product.image} alt={product.name} fetchPriority="high" decoding="async" />
+          <figcaption>{product.type}</figcaption>
+        </figure>
       </section>
       
       <section className="section-pad">
-        <div className="card">
-          <div className="split">
-            <div>
+        <div className="card product-detail-card">
+          <div className="detail-summary">
+            <span className="tag">{product.category}</span>
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <div className="spec-line detail-price-line"><span>{product.size}</span><b>{product.price}</b></div>
+          </div>
+          <div className="product-detail-layout">
+            <div className="detail-panel">
               <h2>Technical Specifications</h2>
               <table className="spec-table">
                 <tbody>
@@ -58,7 +56,7 @@ export default function ProductDetail() {
                 </tbody>
               </table>
             </div>
-            <div>
+            <div className="detail-panel">
               <h2>Key Benefits</h2>
               <ul className="check-list">
                 {advantages.slice(0, 7).map((a) => (
@@ -67,7 +65,7 @@ export default function ProductDetail() {
               </ul>
             </div>
           </div>
-          <div className="hero-actions" style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid var(--line-soft)' }}>
+          <div className="hero-actions detail-actions">
             <Link className="primary-btn" to={`/order/${product.id}`}><ShoppingBag /> Request Quote <ArrowRight size={18} /></Link>
             <a href="/assets/sun-engineering-brochure.pdf" className="outline-btn" download><Download /> Download Brochure</a>
             <button className="outline-btn" onClick={() => openWhatsApp(msg)}><MessageCircle /> Talk to Expert</button>

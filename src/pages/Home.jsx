@@ -1,35 +1,16 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Award, Gauge, Leaf, ShieldCheck, Wrench } from 'lucide-react'
+import { ArrowRight, Award, Leaf, ShieldCheck } from 'lucide-react'
 import { company, products, reviews } from '../data/products.js'
 import { siteImages } from '../data/siteImages.js'
 import ProductCard from '../components/ProductCard.jsx'
 import ReviewCard from '../components/ReviewCard.jsx'
-import { AdvantageBand, BrandLogo, ContactCta, IconPills, ProductRibbon, QualityBand, StatsStrip, TrustPanel } from '../components/PremiumBlocks.jsx'
-
-function HeroGraphic({ type = 'content' }) {
-  if (type === 'image') {
-    return (
-      <img className="hero-art float-3d parallax-slow" src={siteImages.homeConstruction} alt="Sun Engineering site execution" style={{ borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', width: '100%', objectFit: 'cover', minHeight: '360px' }} />
-    )
-  }
-  return (
-    <div className="hero-proof-panel float-3d parallax-slow">
-      <span className="section-kicker">Project Ready Support</span>
-      <h2>From coupler selection to site execution.</h2>
-      <div>
-        <p><Gauge /> Size guidance up to 40mm bar diameter</p>
-        <p><ShieldCheck /> Tensile and spectro report support</p>
-        <p><Wrench /> On-site threading and service coordination</p>
-      </div>
-    </div>
-  )
-}
+import { AdvantageBand, BrandLogo, ContactCta, IconPills, QualityBand, StatsStrip, TrustPanel } from '../components/PremiumBlocks.jsx'
 
 export default function Home() {
   return (
     <div className="home-layout-container">
-      <section className="premium-hero home-hero home-hero-section home-hero-compact home-photo-hero section-pad" style={{ '--hero-bg': `url("${siteImages.homeConstruction}")` }}>
+      <section className="premium-hero home-hero home-hero-section home-hero-compact home-text-hero home-photo-hero section-pad" style={{ '--hero-bg': `url("${siteImages.homeConstruction}")` }}>
         <div className="hero-copy">
           <div style={{ marginBottom: '16px' }}><BrandLogo variant="main" /></div>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}>
@@ -46,7 +27,6 @@ export default function Home() {
             <Link className="outline-btn" to="/products">Explore Product Studio <ArrowRight size={18} /></Link>
           </div>
         </div>
-        <HeroGraphic type="content" />
       </section>
 
       <motion.section 
@@ -62,16 +42,6 @@ export default function Home() {
         <span>Spectro Reports</span>
         <span>Pan India Service</span>
         <span>Up to 40mm Bar Size</span>
-      </motion.section>
-
-      <motion.section 
-        className="section-pad ribbon-section home-ribbon-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <ProductRibbon />
       </motion.section>
 
       <motion.section
